@@ -1,0 +1,136 @@
+/* * {
+    border: 1px solid orange;
+} */
+
+/* Variables */
+
+:root {
+    --darkSlateGrey: hsl(234, 29%, 20%);
+    --charcoalGrey: hsl(235, 18%, 26%);
+    --grey: hsl(231, 7%, 60%);
+    --white: hsl(0, 0%, 100%);
+}
+
+/* General */
+
+body {
+    margin: 0;
+    padding:0;
+    font-family: 'Roboto', sans-serif;
+}
+html {
+    font-size: 16px;
+}
+.page-wrapper {
+    margin: 0 auto;
+}
+picture.hero {
+    width:100%;
+}
+
+/* Typography */
+
+p {
+    font-size: 1rem;
+}
+h1 {
+    font-size: 2rem;
+    margin-top: 0.25rem;
+}
+
+/* Sign up form */
+
+.sign-up {
+    padding: 2rem;
+}
+
+.sign-up p {
+    margin-bottom: 25px;
+}
+
+.sign-up ul {
+    padding: 0;
+    margin: 0;
+}
+
+.sign-up ul li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.sign-up ul li::before {
+    content: url('./assets/images/icon-list.svg');
+    margin-right: 15px;
+}
+
+/* Form */
+
+.sign-up__form {
+    width:100%;
+}
+.sign-up__form label {
+    color: var(--darkSlateGrey);
+    font-weight: 700;
+    display:block;
+    margin-bottom: 0.4rem;
+    margin-top: 2rem;
+}
+
+.sign-up__form input, .sign-up__form button {
+    border-radius: 5px;
+    width:100%;
+    padding: 0.8rem;
+    box-sizing: border-box;
+    border: 1px solid var(--grey);
+    margin-bottom: 0.4rem;
+}
+
+.sign-up__form button {
+    background-color: var(--darkSlateGrey);
+    color: var(--white);
+    border: none;
+    font-weight: 700;
+    margin-top: 1.25rem;
+}
+
+/* MEDIA QUERY FOR DESKTOP LAYOUT - UPDATE */
+@media screen and (min-width: 375px) {
+    .page-wrapper {
+    display: grid;
+    width: 100vw;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 800px;
+    grid-gap: 2rem;
+    contain: content;
+}
+    header {
+    grid-area: 1/2/2/3;
+    height: 100%;
+}
+    .sign-up {
+    grid-area: 1/1/2/2;
+    height: 100%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    margin-left:2rem;
+    margin-top: 2rem;
+}
+    .hero {
+    border-radius: 25px;
+    height: 100%;
+    contain: content;
+    }
+    .sign-up__form input {
+    width: 100%;
+    }
+    .sign-up__form button {
+        width: 100%;
+        }
+}
+    /* .result-text {
+    width: 55%;
+    }
+}
