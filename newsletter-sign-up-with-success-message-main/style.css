@@ -17,10 +17,9 @@ html {
     font-size: 16px;
 }
 .page-wrapper {
-    /* margin: 0 2rem 0 0; */
     padding: 1rem;
     max-width: 1190px;
-    /* margin-right: 1rem; */
+    width: 92%;
 }
 
 img {
@@ -47,7 +46,7 @@ h1 {
 
 .sign-up p {
     margin-bottom: 25px;
-    width: 95%;
+    width: 80%;
 }
 
 .sign-up ul {
@@ -100,7 +99,7 @@ h1 {
     cursor: pointer;
 }
 
-/* MEDIA QUERY FOR DESKTOP LAYOUT - UPDATE */
+/* MEDIA QUERY FOR DESKTOP LAYOUT */
 @media screen and (min-width: 850px) {
     .page-wrapper {
     display: grid;
@@ -129,8 +128,8 @@ h1 {
     display: flex;
     flex-direction: column;
     align-content: center;
-    margin-top: 1rem;
     padding-left: 1rem;
+    margin: 0 0 0 15rem;
 }
     .sign-up__form input {
     width: 100%;
@@ -138,4 +137,11 @@ h1 {
     .sign-up__form button {
         width: 100%;
 }
+}
+
+/* MEDIA QUERY FOR TABLET */
+@media screen and (min-width: 820px) {
+    .page-wrapper {
+        margin: 1.5rem 0 0 1.5rem;
+    }
 }
